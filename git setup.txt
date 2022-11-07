@@ -1,0 +1,21 @@
+git config --global user.name "Your name"
+git config --global user.email "Your email"
+
+check for ssh key
+ls ~/.ssh
+if file with .pub extension is not found or error says ssh key not found then create ssh key
+
+create ssh key
+ssh-keygen -t rsa -b 4096 -C "your email"
+
+windows
+clip < ~/.ssh/id_rsa.pub
+
+linux 
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+github login > setting>ssh and gpg key>add ssh key >title any and ssh key paste
+
+test the setup
+ssh -T git@github.com
